@@ -7,28 +7,24 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    glu        \
-    libdecor   \
-    physfs     \
-    python     \
-    scons      \
-    sdl2       \
-    sdl2_image \
+    fluidsynth     \
+    glu            \
+    physfs         \
+    pipewire-audio \
+    pipewire-jack  \
+    python         \
+    scons          \
     sdl2_mixer
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini sdl2_image-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package
-
-# If the application needs to be manually built that has to be done down here
-echo "Making nightly build of D1X-Rebirth..."
+echo "Building D1X-Rebirth..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/dxx-rebirth/dxx-rebirth"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./dxx-rebirth
+git clone --depth 1 "$REPO" ./dxx-rebirth
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
@@ -49,9 +45,4 @@ declare -a _common_opts=(
         'screenshot=png')
 scons "${_common_opts[@]}" 'd1x=1' 'd2x=0'
 
-mv -v build/d1x-rebirth/d1x-rebirth ../AppDir/bin
-mv -v 'd1x-rebirth addons'/d1xr-hires.dxa ../AppDir/bin
-mv -v 'd1x-rebirth addons'/"d1xr-sc55-music.dxa" ../AppDir/bin
-mv -v d1x-rebirth/d1x-rebirth.desktop ../AppDir
-cp contrib/packaging/linux/descent.svg ../AppDir/.DirIcon
-mv -v contrib/packaging/linux/descent.svg ../AppDir
+mv -v build/d1x-rebirth/d1x-rebirth "d1x-rebirth addons/d1xr-hires.dxa" "d1x-rebirth addons/d1xr-sc55-music.dxa" ../AppDir/bin
