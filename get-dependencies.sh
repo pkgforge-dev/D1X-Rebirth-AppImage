@@ -47,7 +47,6 @@ declare -a _common_opts=(
         'use_udp=yes'
         'use_tracker=yes'
         'screenshot=png')
-#export CXXFLAGS="${CXXFLAGS:-/-Wp,-D_GLIBCXX_ASSERTIONS/}"
 scons "${_common_opts[@]}" 'd1x=1' 'd2x=0'
 
 mv -v build/d1x-rebirth/d1x-rebirth ../AppDir/bin
