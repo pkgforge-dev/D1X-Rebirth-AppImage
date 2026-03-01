@@ -14,7 +14,7 @@ export STARTUPWMCLASS=
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/d1x-rebirth
+quick-sharun ./AppDir/bin/d1x-rebirth
 
 # Additional changes can be done in between here
 
