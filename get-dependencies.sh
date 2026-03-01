@@ -7,13 +7,15 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    glu        \
-    libdecor   \
-    physfs     \
-    python     \
-    scons      \
-    sdl2       \
-    sdl2_image \
+    glu            \
+    libdecor       \
+    physfs         \
+    pipewire-audio \
+    pipewire-jack  \
+    python         \
+    scons          \
+    sdl2           \
+    sdl2_image     \
     sdl2_mixer
 
 echo "Installing debloated packages..."
