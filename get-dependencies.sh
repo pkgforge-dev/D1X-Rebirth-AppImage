@@ -36,10 +36,9 @@ wget https://www.dxx-rebirth.com/d1x-rebirth_addons.zip
 bsdtar -xvf d1x-rebirth_addons.zip
 
 local -a _common_opts=(
-        "$MAKEFLAGS"
+        "${MAKEFLAGS:-}"
         '-Cdxx-rebirth'
         'builddir=./build'
-        'prefix=/usr'
         'opengl=yes'
         'sdl2=yes'
         'sdlmixer=yes'
