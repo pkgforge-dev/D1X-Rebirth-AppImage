@@ -1,0 +1,7 @@
+#!/bin/false
+dir=$HOME/.d1x-rebirth
+if [ ! -f "dir"/d1xr-hires.dxa ]; then
+  mkdir -p "$dir"
+  ln -s "$APPDIR"/bin/d1xr-hires.dxa "$dir"
+  ln -s "$APPDIR"/bin/d1xr-sc55-music.dxa "$dir"
+fi
