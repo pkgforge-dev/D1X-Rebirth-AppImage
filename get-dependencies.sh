@@ -21,11 +21,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano sdl2_image-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package
-
-# If the application needs to be manually built that has to be done down here
-echo "Making nightly build of D1X-Rebirth..."
+echo "Building D1X-Rebirth..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/dxx-rebirth/dxx-rebirth"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
