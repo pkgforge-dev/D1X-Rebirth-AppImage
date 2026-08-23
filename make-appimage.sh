@@ -8,6 +8,7 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/dxx-rebirth/dxx-rebirth/cb0473dbd5fb6e261223080ba1e60b6d7a228954/contrib/packaging/linux/descent.svg
+export DESKTOP=https://raw.githubusercontent.com/dxx-rebirth/dxx-rebirth/refs/heads/master/d1x-rebirth/d1x-rebirth.desktop
 export STARTUPWMCLASS=d1x-rebirth
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1
