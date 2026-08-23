@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/D1X-Rebirth-AppImage)](https://github.com/pkgforge-dev/D1X-Rebirth-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/dxx-rebirth/dxx-rebirth/blob/master/contrib/packaging/linux/descent.svg?raw" width="128" />
+  <img src="https://raw.githubusercontent.com/dxx-rebirth/dxx-rebirth/cb0473dbd5fb6e261223080ba1e60b6d7a228954/contrib/packaging/linux/descent.svg" width="128" />
 </p>
 
 
