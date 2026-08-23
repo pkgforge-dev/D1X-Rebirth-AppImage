@@ -9,7 +9,6 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     fluidsynth     \
     glu            \
-    libdecor       \
     physfs         \
     pipewire-audio \
     pipewire-jack  \
@@ -19,7 +18,7 @@ pacman -Syu --noconfirm \
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano sdl2_image-mini
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini sdl2_image-mini
 
 echo "Building D1X-Rebirth..."
 echo "---------------------------------------------------------------"
