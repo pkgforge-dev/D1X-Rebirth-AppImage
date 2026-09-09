@@ -24,7 +24,7 @@ echo "Building D1X-Rebirth..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/dxx-rebirth/dxx-rebirth"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./dxx-rebirth
+git clone --depth 1 "$REPO" ./dxx-rebirth
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
